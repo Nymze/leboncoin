@@ -171,6 +171,10 @@ nav {
 }
 /* === Card === */
 
+.link-product {
+  text-decoration: none;
+}
+
 .card-container {
   display: flex;
   align-items: center;
@@ -242,4 +246,117 @@ nav {
   font-size: 20px;
   line-height: 23px;
   color: #f56b2a;
+}
+
+/* ======= Product Page ======= */
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
+.product {
+  margin-top: 100px;
+  width: 700px;
+  height: 607px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 700px;
+  height: 393.56px;
+}
+
+.product-title {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  padding-left: 29px;
+  text-align: left;
+}
+
+.product-price {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  padding-left: 29px;
+  text-align: left;
+  color: #f56b2a;
+}
+
+.product-date {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 140%;
+
+  padding-left: 29px;
+  text-align: left;
+
+  color: #000000;
+}
+
+.seller-card {
+  display: flex;
+  width: 279px;
+  height: 130px;
+  background: #ffffff;
+  margin-left: 20px;
+  margin-top: 100px;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.username {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 23px;
+  line-height: 140%;
+  margin: 0;
+  text-align: left;
+}
+
+.seller-btn {
+  width: 230px;
+  height: 44px;
+
+  background: #f56b2a;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+.seller-link {
+  text-align: left;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 140%;
+  color: #4183d7;
+}
+
+.description {
+  margin: auto;
+  margin-top: 29px;
+}
+
+.description-sous-wrapper {
+  margin: auto;
+  width: 61%;
+  text-align: left;
 }

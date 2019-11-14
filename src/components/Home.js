@@ -1,10 +1,13 @@
 import React from "react";
 import "../App.css";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <Link to={"/shop"}>
+        <h1 className="Clickme">Click me</h1>
+      </Link>
     </div>
   );
 }

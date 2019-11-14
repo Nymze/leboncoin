@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../App.css";
 
 function Shop() {
@@ -10,7 +11,7 @@ function Shop() {
 
   const fetchItems = async () => {
     const data = await fetch(
-      " https://leboncoin-api.herokuapp.com/api/offer/with-count?skip=0&limit=25"
+      "https://leboncoin-api.herokuapp.com/api/offer/with-count"
     );
 
     const items = await data.json();
@@ -22,15 +23,17 @@ function Shop() {
     <div>
       {items.map(item => (
         <div className="card-container" key={item._id}>
-          <div className="card">
-            <div className="image-background">
-              <img className="image" src={item.pictures} />
+          <Link className="link-product" to={"/shop/" + item._id}>
+            <div className="card">
+              <div className="image-background">
+                <img className="image" src={item.pictures} />
+              </div>
+              <div className="title-price-wrapper">
+                <h4 className="card-title">{item.title}</h4>
+                <h5 className="card-price">{item.price + "€"}</h5>
+              </div>
             </div>
-            <div className="title-price-wrapper">
-              <h4 className="card-title">{item.title}</h4>
-              <h5 className="card-price">{item.price + "€"}</h5>
-            </div>
-          </div>
+          </Link>
         </div>
       ))}
     </div>
